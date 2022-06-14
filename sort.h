@@ -1,3 +1,6 @@
+#ifndef SORT_H
+#define SORT_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -11,9 +14,9 @@
  */
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 void bubble_sort(int *array, size_t size);
@@ -21,3 +24,5 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void selection_sort(int *array, size_t size);
 listint_t *change(listint_t *temp, listint_t **list);
+
+#endif
