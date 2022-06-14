@@ -13,6 +13,9 @@ void selection_sort(int *array, size_t size)
 	size_t act, mc, j;
 	int temp;
 
+	if (array == NULL)
+		return;
+
 	for (act = 0; act < size - 1; act++)
 	{
 		mc = act;
@@ -23,7 +26,6 @@ void selection_sort(int *array, size_t size)
 			{
 				mc = j;
 			}
-
 			j++;
 		}
 		temp = array[act];
